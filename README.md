@@ -4,20 +4,20 @@
 
 # pybind11 demo
 
-Demonstrates how to call a C++ class from Python using pybind11.
-
-Tested on Linux and Mac: https://travis-ci.org/bast/pybind11-demo/builds
+Demonstrates how to call a C++ class from Python using pybind11 and VS 2017
 
 
 ## How to build this demo
+
+In x64 Native tool command prompt for visual studio 2017:
 
 ```
 git clone --recursive https://github.com/bast/pybind11-demo.git
 cd pybind11-demo
 mkdir build
 cd build
-cmake ..
-make
+cmake -A x64 ..
+devenv /build Debug example.sln
 ```
 
 
