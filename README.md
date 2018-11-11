@@ -37,3 +37,14 @@ devenv /build Debug example.sln
 >>> my_dog.get_hunger()
 6
 ```
+
+
+## Create VS project withoug CMAKE
+
+* Choose Windows Desktop Dynamic-Link Library (DLL). Avoid Windows Universal DLL (Universal Windows). Otherwise, the C++ functions won't be exported to Python.
+
+* Add Python and Pybind11 include files. Add Python/libs/python3*.lib to additional link libs.
+
+* Set Conformance mode --> No; and Enable Run-Time Type Information --> Yes
+
+* In pch.h --> #define _CRT_SECURE_NO_WARNINGS
